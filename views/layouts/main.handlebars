@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+{{#if flash}}
+ <div class="alert alert-dismissible alert-{{flash.type}}">
+ <button type="button" class="close"
+ data-dismiss="alert" aria-hidden="true">&times;<button>
+ <strong>{{flash.intro}}</strong> {{{flash.message}}}
+ </div>
+{{/if}}
+<title>Meadowlark Travels</title>
+{{#if showTests}}
+	<link rel="stylesheet" href="/vendor/mocha.css">
+{{/if}}
+<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+</head>
+<body>
+{{{body}}}
+{{#if showTests}}
+	<div id="mocha"><>
+	<script src="/vendor/mocha.js"></script>
+	<script src="/vendor/chai.js"></script>
+	<script>mocha.ui("ttd");
+	var assert = chai.assert;
+	</script>
+	<script src="/qa/test-global.js"></script>
+	{{#if pageTestScript}}
+		<script src="{{pageTestScript}}"></script>
+	{{/if}}
+{{/if}}
+</body>
+</html>

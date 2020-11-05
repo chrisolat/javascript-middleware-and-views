@@ -1,0 +1,53 @@
+<h2>Add a new Attraction!</h2>
+<form class="form-horizontal" role="form"
+ action="/api/attraction" method="POST">
+ <input type="hidden" name="_csrf" value="{{csrf}}">
+ <div class="form-group">
+ <label for="fieldName" class="col-sm-2 control-label">Name</label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control"
+ id="fieldName" name="name">
+ </div>
+ <div class="form-group">
+ <label for="fieldName" class="col-sm-2 control-label">Description</label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control"
+ id="fieldName" name="description">
+ </div>
+ <div class="form-group">
+ <h3>Location</h3>
+ <label for="fieldName" class="col-sm-2 control-label">lat</label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control"
+ id="fieldName" name="lat">
+ </div>
+ <div class="form-group">
+ <label for="fieldName" class="col-sm-2 control-label">lng</label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control"
+ id="fieldName" name="lng">
+ </div>
+ </div>
+ <div> </div></div>
+ <h3>Email</h3>
+ <div class="form-group">
+ <label for="fieldEmail" class="col-sm-2 control-label">Email</label>
+ <div class="col-sm-4">
+ <input type="email" class="form-control" required
+ id="fieldName" name="email">
+ </div>
+ </div>
+ <div class="form-group">
+ <label for="fieldName" class="col-sm-2 control-label">approved</label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control"
+ id="fieldName" name="approved">
+ </div>
+
+ <div class="form-group">
+ <div class="col-sm-offset-2 col-sm-4">
+ <button type="submit" class="btn btn-default">Add</button>
+ </div>
+ </div>
+</form>
+<a href="/">Home</a>
